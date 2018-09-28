@@ -1,0 +1,460 @@
+{\rtf1\ansi\ansicpg1252\cocoartf1561\cocoasubrtf600
+{\fonttbl\f0\froman\fcharset0 Times-Roman;\f1\froman\fcharset0 TimesNewRomanPSMT;\f2\fnil\fcharset0 Consolas;
+}
+{\colortbl;\red255\green255\blue255;\red0\green0\blue0;\red5\green127\blue184;\red51\green51\blue51;
+\red0\green0\blue255;\red163\green21\blue21;}
+{\*\expandedcolortbl;;\csgenericrgb\c0\c0\c0;\csgenericrgb\c1961\c49804\c72157;\csgenericrgb\c20000\c20000\c20000;
+\csgenericrgb\c0\c0\c100000;\csgenericrgb\c63922\c8235\c8235;}
+{\info
+{\author Charles DE VANDIERE}}\paperw11905\paperh16837\margl1417\margr1417\margb1417\margt1417\vieww16940\viewh13040\viewkind0
+\deftab720
+\pard\pardeftab720\sb360\sa60\pardirnatural\partightenfactor0
+
+\f0\fs24 \cf2 \
+\pard\pardeftab720\pardirnatural\partightenfactor0
+\cf0 \{\
+\'a0\'a0humans \{\
+\'a0\'a0\'a0\'a0id\
+\'a0\'a0\'a0\'a0name\
+\'a0\'a0\'a0\'a0height\
+\'a0\'a0\}\
+\}\
+\pard\pardeftab720\sb360\sa60\pardirnatural\partightenfactor0
+\cf2 La r\'e9ponse que pourrait nous faire GraphQL serait par exemple de ce type\'a0:\
+\pard\pardeftab720\pardirnatural\partightenfactor0
+\cf0 \{\
+\'a0\'a0"data": \{\
+\'a0\'a0\'a0\'a0"humans": [\
+\'a0\'a0\'a0\'a0\'a0\'a0\{\
+\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0"id": "1",\
+\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0"name": "Luke Skywalker",\
+\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0"height": 1.72\
+\'a0\'a0\'a0\'a0\'a0\'a0\},\
+\'a0\'a0\'a0\'a0\'a0\'a0\{\
+\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0"id": "2",\
+\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0"name": "Obiwan Kenobi",\
+\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0"height": 1.75\
+\'a0\'a0\'a0\'a0\'a0\'a0\}\
+\'a0\'a0\'a0\'a0]\
+\'a0\'a0\}\
+\}\
+\pard\pardeftab720\sb360\sa60\pardirnatural\partightenfactor0
+\cf2 \
+\pard\pardeftab720\pardirnatural\partightenfactor0
+\cf0 \{\
+\'a0\'a0human(id: 1) \{\
+\'a0\'a0\'a0\'a0name\
+\'a0\'a0\'a0\'a0height\
+\'a0\'a0\'a0\'a0planet\
+\'a0\'a0\'a0\'a0friends \{\
+\'a0\'a0\'a0\'a0\'a0\'a0name\
+\'a0\'a0\'a0\'a0\}\
+\'a0\'a0\}\
+\}\
+\pard\pardeftab720\sb360\sa60\pardirnatural\partightenfactor0
+\cf2 \
+\pard\pardeftab720\pardirnatural\partightenfactor0
+\cf0 \{\
+\'a0\'a0"data": \{\
+\'a0\'a0\'a0\'a0"human": [\
+\'a0\'a0\'a0\'a0\'a0\'a0\{\
+\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0"name": "Luke Skywalker",\
+\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0"height": 1.72,\
+\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0"planet": "Tatooine",\
+\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0"friends": [\
+\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\{\
+\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0"name": "R2-D2",\
+\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\},\
+\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\{\
+\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0"name": "Hann Solo",\
+\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\}\
+\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0]\
+\'a0\'a0\'a0\'a0\'a0\'a0\}\
+\'a0\'a0\'a0\'a0]\
+\'a0\'a0\}\
+\}\
+\pard\pardeftab720\sb360\sa120\pardirnatural\partightenfactor0
+
+\b\fs33 \cf3 \
+\pard\pardeftab720\pardirnatural\partightenfactor0
+
+\f1\b0\fs24 \cf4 \
+\pard\pardeftab720\pardirnatural\partightenfactor0
+\cf0 \{\
+jedi: human (id: 1) \{\
+                name\
+ \}\
+           sith: human (id: 5) \{\
+          name\
+          \}\
+\}\
+\pard\pardeftab720\sb360\sa60\pardirnatural\partightenfactor0
+
+\f0 \cf2 \
+\
+\pard\pardeftab720\pardirnatural\partightenfactor0
+
+\f1 \cf0 \{\
+    "data": \{\
+        "jedi": \{\
+            "name": "Luke Skywalker"\
+        \},\
+        "sith": \{\
+            "name": "Dark Vador"\
+        \}\
+    \}\
+\}\
+\pard\pardeftab720\sb360\sa120\pardirnatural\partightenfactor0
+
+\f0\b\fs42 \cf3 \
+\pard\pardeftab720\pardirnatural\partightenfactor0
+
+\b0\fs24 \cf2 \
+\pard\pardeftab720\sb360\sa60\pardirnatural\partightenfactor0
+\cf2 \
+\pard\pardeftab720\pardirnatural\partightenfactor0
+\cf0 \{\
+\'a0\'a0"human": \{\
+\'a0\'a0\'a0\'a0"name": "Boba Fett"\
+\'a0\'a0\}\
+\}\
+\pard\pardeftab720\sb360\sa60\pardirnatural\partightenfactor0
+\cf2 \
+\pard\pardeftab720\pardirnatural\partightenfactor0
+\cf0 \{\
+\'a0\'a0"data": \{\
+\'a0\'a0\'a0\'a0"createHuman": \{\
+\'a0\'a0\'a0\'a0\'a0\'a0"id": 5,\
+\'a0\'a0\'a0\'a0\'a0\'a0"name": "Boba Fett"\
+\'a0\'a0\'a0\'a0\}\
+\'a0\'a0\}\
+\}\
+\
+\pard\pardeftab720\sb360\sa120\pardirnatural\partightenfactor0
+
+\b\fs42 \cf3 \
+\pard\pardeftab720\pardirnatural\partightenfactor0
+
+\b0\fs24 \cf0 \{\
+\'a0\'a0hero\
+\}\
+\pard\pardeftab720\sb360\sa60\pardirnatural\partightenfactor0
+\cf2 \
+\
+\pard\pardeftab720\pardirnatural\partightenfactor0
+\cf0 \{\
+\'a0\'a0"errors": [\
+\'a0\'a0\'a0\'a0\{\
+\'a0\'a0\'a0\'a0\'a0\'a0"message": "Field \\"hero\\" of type \\"Character\\" must have a selection of subfields. Did you mean \\"hero \{ ... \}\\"?",\
+\'a0\'a0\'a0\'a0\'a0\'a0"locations": [\
+\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\{\
+\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0"line": 3,\
+\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0"column": 3\
+\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\}\
+\'a0\'a0\'a0\'a0\'a0\'a0]\
+\'a0\'a0\'a0\'a0\}\
+\'a0\'a0]\
+\}\
+\pard\pardeftab720\sb360\sa120\pardirnatural\partightenfactor0
+
+\b\fs42 \cf3 \
+\pard\pardeftab720\pardirnatural\partightenfactor0
+
+\b0\fs24 \cf0 \
+public class Droid\
+\{\
+\'a0\'a0\'a0\'a0public string Id \{ get; set; \}\
+\'a0\'a0\'a0\'a0public string Name \{ get; set; \}\
+\}\
+\
+Il nous faut alors cr\'e9er un type \'ab\'a0GraphQL\'a0\'bb pour le d\'e9finir. On l\'92appelle donc DroidType et on le fait d\'e9river de  l\'92ObjectGraphType<Droid> de cette mani\'e8re :\
+public class DroidType : ObjectGraphType<Droid>\
+\{\
+\'a0\'a0\'a0\'a0public DroidType()\
+\'a0\'a0\'a0\'a0\{\
+\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0Name = "Droid";\
+\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0Description = "A mechanical creature in the Star Wars universe.";\
+\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0Field(d => d.Id).Description("The id of the droid.");\
+\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0Field(d => d.Name, nullable: true).Description("The name of the droid.");\
+\'a0\'a0\'a0\'a0\}\
+\}\
+\
+\
+public class Droid\
+\{\
+\'a0\'a0\'a0\'a0public string Id \{ get; set; \}\
+\'a0\'a0\'a0\'a0public string Name \{ get; set; \}\
+\'a0\'a0\'a0\'a0public List<Episode> AppearsIn \{ get; set; \}\
+\}\
+\'a0\
+public class Episode\
+\{\
+\'a0\'a0\'a0\'a0public string Name \{ get; set; \}\
+\'a0\'a0\'a0\'a0public int Year \{ get; set; \}\
+\'a0\'a0\'a0\'a0public int Order \{ get; set; \}\
+\}\
+\
+\pard\pardeftab720\li720\pardirnatural\partightenfactor0
+\cf0 \
+\pard\pardeftab720\pardirnatural\partightenfactor0
+\cf0 public class DroidType : ObjectGraphType<Droid>\
+\{\
+\'a0\'a0\'a0\'a0public DroidType()\
+\'a0\'a0\'a0\'a0\{\
+\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0Name = "Droid";\
+\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0Description = "A mechanical creature in the Star Wars universe.";\
+\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0Field(d => d.Id).Description("The id of the droid.");\
+\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0Field(d => d.Name, nullable: true).Description("The name of the droid.");\
+\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0Field<ListGraphType<EpisodeType>>(\
+\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0"appearsIn",\
+\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0resolve: context => context.Source.AppearsIn);\
+\'a0\'a0\'a0\'a0\}\
+\}\
+\
+\
+public class StarWarsQuery : ObjectGraphType<object>\
+\{\
+\'a0\'a0\'a0\'a0public StarWarsQuery(StarWarsData data)\
+\'a0\'a0\'a0\'a0\{\
+\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0Name = "Query";\
+\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0Field<DroidType>(\
+\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0"droid",\
+\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0arguments: new QueryArguments(\
+\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0new QueryArgument<NonNullGraphType<StringGraphType>>\
+\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\{\
+\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0Name = "id",\
+\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0Description = "id of the droid"\
+\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\}\
+\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0),\
+\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0resolve: data.GetDroidById(id);\
+\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0);\
+\'a0\'a0\'a0\'a0\}\
+\}\
+\
+\
+public class StarWarsSchema : Schema\
+\{\
+\'a0\'a0\'a0\'a0public StarWarsSchema(IDependencyResolver resolver)\
+\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0: base(resolver)\
+\'a0\'a0\'a0\'a0\{\
+\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0Query = resolver.Resolve<StarWarsQuery>();\
+\'a0\'a0\'a0\'a0\}\
+\}\
+\
+\
+\
+public class GraphQLService : IGraphQLService\
+\{\
+\'a0\'a0\'a0\'a0private readonly ISchema _query;\
+\'a0\'a0\'a0\'a0public GraphQLService(ISchema query)\
+\'a0\'a0\'a0\'a0\{\
+\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0_query = query;\
+\'a0\'a0\'a0\'a0\}\
+\'a0\'a0\'a0\'a0public async Task<ExecutionResult> ExecuteQueryAsync(string query)\
+\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0=> await new DocumentExecuter()\
+\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0.ExecuteAsync(options =>\
+\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\{\
+\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0options.Schema = _query;\
+\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0options.Query = query;\
+\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\});\
+\}\
+\
+\
+\pard\pardeftab720\pardirnatural\partightenfactor0
+\cf5 public\cf0  \cf5 async\cf0  Task<IActionResult> GetAsync([FromQuery] \cf5 string\cf0  query)\
+\{\
+\pard\pardeftab720\pardirnatural\partightenfactor0
+
+\f2\fs19 \cf2     ExecutionResult result = \cf5 await\cf2  _graphQLService.ExecuteQueryAsync(query);\
+\
+    \cf5 return\cf2  Ok(result);\
+\}\
+\pard\pardeftab720\pardirnatural\partightenfactor0
+
+\f0\fs24 \cf0 \
+\
+\{\
+\'a0\'a0\'a0\'a0droid(id: "AF669ABD-AAEB-4C7B-870D-0360FDFA02D5") \{\
+\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0id\
+\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0name\
+\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0appearsIn \{\
+\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0name\
+\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0year\
+\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0order\
+\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\}\
+\'a0\'a0\'a0\'a0\}\
+\}\
+\
+\
+\{\
+\'a0\'a0\'a0\'a0"data": \{\
+\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0"droid": \{\
+\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0"id": "AF669ABD-AAEB-4C7B-870D-0360FDFA02D5",\
+\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0"name": "R2-D2",\
+\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0"appearsIn": [\
+\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\{\
+\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0"name": "Un nouvel espoir",\
+\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0"year": 1977,\
+\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0"order": 4\
+\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\},\
+\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\{\
+\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0"name": "L'empire contre-attaque",\
+\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0"year": 1980,\
+\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0"order": 5\
+\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\},\
+\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\{\
+\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0"name": "Le retour du Jedi",\
+\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0"year": 1983,\
+\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0"order": 6\
+\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\}\
+\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0]\
+\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\}\
+\'a0\'a0\'a0\'a0\}\
+\}\
+\
+\
+public class DroidInputType : InputObjectGraphType\
+\{\
+\'a0\'a0\'a0\'a0public DroidInputType()\
+\'a0\'a0\'a0\'a0\{\
+\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0Name = "DroidInput";\
+\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0Field<NonNullGraphType<StringGraphType>>("name");\
+\'a0\'a0\'a0\'a0\}\
+\}\
+\
+\
+public class StarWarsMutation : ObjectGraphType<object>\
+\{\
+\'a0\'a0\'a0\'a0public StarWarsMutation(StarWarsData data)\
+\'a0\'a0\'a0\'a0\{\
+\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0Name = "Mutation";\
+\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0Field<DroidType>(\
+\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0"createDroid",\
+\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0arguments: new QueryArguments(\
+\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0new QueryArgument<NonNullGraphType<DroidInputType>> \{Name = "droid"\}\
+\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0),\
+\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0resolve: context =>\
+\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\{\
+\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0var droid = context.GetArgument<Droid>("droid");\
+\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0return data.AddDroid(droid);\
+\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\});\
+\'a0\'a0\'a0\'a0\}\
+\}\
+\
+\
+public class StarWarsSchema : Schema\
+\{\
+\'a0\'a0\'a0\'a0public StarWarsSchema(IDependencyResolver resolver)\
+\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0: base(resolver)\
+\'a0\'a0\'a0\'a0\{\
+\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0Query = resolver.Resolve<StarWarsQuery>();\
+\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0Mutation = resolver.Resolve<StarWarsMutation>();\
+\'a0\'a0\'a0\'a0\}\
+\}\
+\
+\
+\
+\
+public class GraphQLService : IGraphQLService\
+\{\
+\'a0\'a0\'a0\'a0private readonly ISchema _query;\
+\'a0\'a0\'a0\'a0public GraphQLService(ISchema query)\
+\'a0\'a0\'a0\'a0\{\
+\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0_query = query;\
+\'a0\'a0\'a0\'a0\}\
+\'a0\'a0\'a0\'a0public Task<ExecutionResult> ExecuteQueryAsync(string query)\
+\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0=> new DocumentExecuter()\
+\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0.ExecuteAsync(options =>\
+\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\{\
+\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0options.Schema = _query;\
+\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0options.Query = query;\
+\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\});\
+\'a0\'a0\'a0\'a0public Task<ExecutionResult> ExecuteMutationAsync(string query, string variables)\
+\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0=> new DocumentExecuter()\
+\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0.ExecuteAsync(options =>\
+\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\{\
+\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0options.Schema = _query;\
+\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0options.Query = query;\
+\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0options.Inputs = variables.ToInputs();\
+\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\});\
+\}\
+\
+\
+\pard\pardeftab720\pardirnatural\partightenfactor0
+\cf5 public\cf0  \cf5 async\cf0  Task<IActionResult> DoMutationsAsync([FromBody] string query, [FromBody] string variables)\
+\{\
+\pard\pardeftab720\pardirnatural\partightenfactor0
+
+\f2\fs19 \cf2     ExecutionResult result = \cf5 await\cf2  _graphQLService.ExecuteMutationAsync(query, variables);\
+\
+\pard\pardeftab720\pardirnatural\partightenfactor0
+\cf5     return\cf2  Ok(result);\
+\}\
+\
+\pard\pardeftab720\pardirnatural\partightenfactor0
+
+\f0\fs24 \cf0 \
+\
+\{\
+\'a0\'a0\'a0\'a0"query": "mutation ($droid: DroidInput!)\{ createDroid(droid: $droid) \{ id name \} \}",\
+\'a0\'a0\'a0\'a0"variables": \{\
+\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0"droid": \{\
+\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0"name": "R2-D2"\
+\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\}\
+\'a0\'a0\'a0\'a0\}\
+\}\
+\
+\
+\
+\{\
+\'a0\'a0\'a0\'a0"data": \{\
+\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0"droid": \{\
+\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0"id": "AF669ABD-AAEB-4C7B-870D-0360FDFA02D5",\
+\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0"name": "R2-D2"\
+\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\}\
+\'a0\'a0\'a0\'a0\}\
+\}\
+\
+\
+\
+public class StarWarsQuery : ObjectGraphType<object>\
+\{\
+\'a0\'a0\'a0\'a0public StarWarsQuery(StarWarsData data)\
+\'a0\'a0\'a0\'a0\{\
+\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0Name = "Query";\
+\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0Field<DroidType>(\
+\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0"droid",\
+\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0arguments: new QueryArguments(\
+\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0new QueryArgument<NonNullGraphType<StringGraphType>>\
+\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\{\
+\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0Name = "id",\
+\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0Description = "id of the droid"\
+\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\}\
+\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0),\
+\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0resolve: context =>\
+            \{\
+                var droid = data.GetDroidById(id);\
+                if (data == null)\
+                \{\
+                    context.Errors
+\f2\fs19 \cf2 .Add(\cf5 new\cf2  GraphQL.ExecutionError(\cf6 "Le droid n\'92existe pas."\cf2 );\
+
+\f0\fs24 \cf0                 \}\
+                return droid;\
+\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0);\
+\'a0\'a0\'a0\'a0\}\
+\}\
+\
+\
+\
+\{\
+    "errors": [\
+        \{\
+            "message": "
+\f2\fs19 \cf6 Le droid n\'92existe pas."\
+
+\f0\fs24 \cf0         \}\
+    ]\
+\}\
+\
+}
